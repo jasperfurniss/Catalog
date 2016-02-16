@@ -3,6 +3,10 @@ from filer.fields.image import FilerImageField
 from filer.fields.file import FilerFileField
 
 
+DURATION = (
+    ('2', '2 Weeks'),
+    ('8', '8 Weeks'),
+)
 
 
 class Course(models.Model):
@@ -11,7 +15,6 @@ class Course(models.Model):
     instructor = models.CharField(max_length=255, null=True, blank=True)
     course_duration = models.CharField(max_length=255, null=True, blank=True)
     art = models.CharField(max_length=255, null=True, blank=True)
-
 
     def __unicode__(self):
         return u'{}'.format(self.name)

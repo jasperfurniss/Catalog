@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'mptt',
     'easy_thumbnails',
     'filer',
-    'ckeditor'
+    'ckeditor',
 ]
 
 MIDDLEWARE_CLASSES = [
