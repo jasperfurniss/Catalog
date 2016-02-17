@@ -2,33 +2,12 @@
 {% block content %}
     <div class="container">
         <h1>Add A Course</h1>
-        <form action="{% url 'course' %}" method="post">{% csrf_token %}
+        <form action="{% url 'course_list' %}" method="post">{% csrf_token %}
             <h3>Course Title: {{ form.course_title }}</h3>
             <h3>Course Description: {{ form.description }}</h3>
             <h3>Instructor: {{ form.instructor }}</h3>
             <h3>Course Duration: {{ form.course_duration }}</h3>
-{#            <h3>Image: {{ form.art }}</h3>#}
-
-            <div class="setting image_picker">
-                <h2>Artwork (Drag & Drop or click the Cloud)</h2>
-                <div class="settings_wrap">
-                    <label class="drop_target">
-                        <div class="image_preview"></div>
-                        <input id="inputFile" type="file"/>
-                    </label>
-                    <div class="settings_actions vertical">
-                            <i class="fa fa-picture-o"></i> Choose from Uploads</a>
-                        <a data-action="remove_current_image" class="disabled">
-                            <i class="fa fa-ban"></i> Remove Current Image</a>
-                    </div>
-                    <div class="image_details">
-                        <label class="input_line image_title">
-                            <input type="text" placeholder="Title"/>
-                        </label>
-                    </div>
-                </div>
-            </div>
-
+            <h3>Image: {{ form.art }}</h3>
             <input class=btn type="submit" value="Save Course">
         </form>
     </div>

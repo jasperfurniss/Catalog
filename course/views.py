@@ -19,6 +19,7 @@ class Create(UpdateView):
         else:
             return Course()
 
+
 class CourseList(ListView):
     model = Course
     template_name = 'course/course_list.html'

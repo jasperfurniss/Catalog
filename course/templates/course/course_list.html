@@ -2,7 +2,7 @@
 
 {% block content %}
     <h2>Django Course Catalog</h2>
-    <p>Please select from out awesome courses!</p>
+    <p>All the courses.</p>
     <div class="table-responsive">
         <table class="table table-striped table-bordered">
             <thead>
@@ -24,6 +24,6 @@
         </table>
     </div>
     <div>
-        <a class="col-sm-1" style="margin-top: 25px; margin-bottom: 10px;" href="{% url 'catalog' %}"><button class="btn-primary">Create</button></a>
+        <a class="col-sm-1" style="margin-top: 25px; margin-bottom: 10px;" href="{% url 'course' %}"><button class="btn-primary">Create</button></a>
     </div>
 {% endblock content %}
