@@ -193,6 +193,7 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.redirects',
 
+    'compressor',
     'mptt',
     'easy_thumbnails',
     'filer',
