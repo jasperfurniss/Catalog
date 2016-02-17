@@ -2,7 +2,7 @@
 {% block content %}
     <div class="container">
         <h1>Add A Course</h1>
-        <form action="{% url 'course_list' %}" method="post">{% csrf_token %}
+        <form action="{% url 'course' %}" method="post">{% csrf_token %}
             <h3>Course Title: {{ form.course_title }}</h3>
             <h3>Course Description: {{ form.description }}</h3>
             <h3>Instructor: {{ form.instructor }}</h3>
