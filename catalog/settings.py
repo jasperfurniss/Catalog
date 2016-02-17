@@ -100,10 +100,18 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'compressor.finders.CompressorFinder',
+    'djangobower.finders.BowerFinder',
 )
 # ######### END STATIC CONFIGURATION
 
 
+BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_DIR, 'static')
+
+BOWER_INSTALLED_APPS = (
+    'jquery#2.2.0',
+    'bootstrap#3.3.6',
+    'font-awesome#4.5.0',
+)
 
 CACHES = {
     'default': {
@@ -184,11 +192,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     'django.contrib.redirects',
+
     'mptt',
     'easy_thumbnails',
     'filer',
     'ckeditor',
     'course',
+    'djangobower',
 ]
 
 # ######### END APP CONFIGURATION
