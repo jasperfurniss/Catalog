@@ -1,13 +1,15 @@
 {% extends 'course/base.html' %}
 {% block content %}
-    <h1>Hey there</h1>
+    <div class="container">
+    <h1>Add A Course</h1>
     <form method="post">{% csrf_token %}
-        <h2>{{ form.course_title }}</h2>
-        <h2>{{ form.description }}</h2>
-        <h2>{{ form.instructor }}</h2>
-        <h2>{{ form.course_duration }}</h2>
-        <h2>{{ form.art }}</h2>
-        <input type="submit" value="Save Course">
+        <h3>Course Title: {{ form.course_title }}</h3>
+        <h3>Course Description: {{ form.description }}</h3>
+        <h3>Instructor: {{ form.instructor }}</h3>
+        <h3>Course Duration: {{ form.course_duration }}</h3>
+        <h3>Image: {{ form.art }}</h3>
+        <input class=btn type="submit" value="Save Course">
     </form>
+    </div>
 {% endblock content %}
 
