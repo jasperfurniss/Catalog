@@ -15,7 +15,7 @@ class Course(models.Model):
     description = models.CharField(max_length=255, null=True, blank=True)
     instructor = models.CharField(max_length=255, null=True, blank=True)
     course_duration = forms.ChoiceField(choices=DURATION, widget=forms.RadioSelect)
-    art = FilerImageField(null=True, blank=True, related_name='art_image_collection')
+    art = FilerImageField(null=True, blank=True)
 
     def __unicode__(self):
         return u'{}'.format(self.name)
