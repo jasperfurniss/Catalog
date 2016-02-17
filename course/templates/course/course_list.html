@@ -1,15 +1,16 @@
 {% extends 'course/base.html' %}
 
 {% block content %}
-    <h2>Django Course Catalog</h2>
-    <p>All the courses.</p>
     <div class="container">
+        <h2>Django Course Catalog</h2>
+        <p>All the courses.</p>
         <div class="table-responsive">
             <table class="table table-striped table-bordered">
                 <thead>
                 <tr>
                     <td class="col-sm-4"><h4><strong>#</strong></h4></td>
                     <td class="col-sm-4"><h4><strong>Course Title</strong></h4></td>
+                      <td class="col-sm-4"><h4><strong>Course Art</strong></h4></td>
                     <td class="col-sm-4"><h4><strong>Instructor</strong></h4></td>
                     <td class="col-sm-4"><h4><strong>Duration</strong></h4></td>
                 </tr>
@@ -18,6 +19,7 @@
                     <tr>
                         <td>{{ course.pk }}</td>
                         <td><a href="{% url 'course_detail' pk=course.pk %}">{{ course.course_title }}</a></td>
+                        <td><img src="{{ course.art }}" alt=""></td>
                         <td>{{ course.instructor }}</td>
                         <td>{{ course.course_duration }} weeks</td>
                     </tr>
