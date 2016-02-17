@@ -123,10 +123,10 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.locale.LocaleMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'cms.middleware.user.CurrentUserMiddleware',
-    'cms.middleware.page.CurrentPageMiddleware',
-    'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware',
+    # 'cms.middleware.user.CurrentUserMiddleware',
+    # 'cms.middleware.page.CurrentPageMiddleware',
+    # 'cms.middleware.toolbar.ToolbarMiddleware',
+    # 'cms.middleware.language.LanguageCookieMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
 ]
 # ######### END MIDDLEWARE CONFIGURATION
@@ -148,8 +148,6 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'django.template.context_processors.static',
                 'django.template.context_processors.request',
-                'sekizai.context_processors.sekizai',
-                'cms.context_processors.cms_settings',
             ],
             'debug': False,
             'loaders': [
@@ -160,19 +158,8 @@ TEMPLATES = [
     },
 ]
 
-CMS_TEMPLATES = [
-    ('brochure/internal-landing.html', 'Internal Landing Template'),
-    ('brochure/content-one-column.html', 'One Column Template'),
-    ('brochure/contact.html', 'Contact Page Template'),
-    ('brochure/landing.html', 'Landing Template'),
-    ('brochure/home.html', 'Home Template'),
-    ('brochure/sitemap.html', 'Sitemap'),
-    ('brochure/project.html', 'Project Template'),
-    ('brochure/downloads.html', 'Downloads Template'),
 
-    ('zinnia/entry_list.html', 'Blog List Template'),
-]
-# ######### END TEMPLATE CONFIGURATION
+
 
 
 # ######### FIXTURE CONFIGURATION
@@ -185,13 +172,18 @@ FIXTURE_DIRS = [
 # ######### APP CONFIGURATION
 INSTALLED_APPS = [
     'accounts',
+    'authtools',
+    'hijack',
 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sitemaps',
+    'django.contrib.redirects',
     'mptt',
     'easy_thumbnails',
     'filer',
@@ -209,7 +201,7 @@ INSTALLED_APPS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': os.path.join(PROJECT_DIR, 'db.sqlite3'),
     }
 }
 
