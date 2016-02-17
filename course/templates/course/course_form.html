@@ -1,0 +1,13 @@
+{% extends 'course/base.html' %}
+{% block content %}
+    <h1>Hey there</h1>
+    <form method="post">{% csrf_token %}
+        <h2>{{ form.course_title }}</h2>
+        <h2>{{ form.description }}</h2>
+        <h2>{{ form.instructor }}</h2>
+        <h2>{{ form.course_duration }}</h2>
+        <h2>{{ form.art }}</h2>
+        <input type="submit" value="Save Course">
+    </form>
+{% endblock content %}
+

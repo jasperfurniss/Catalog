@@ -37,11 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'course',
     'mptt',
     'easy_thumbnails',
     'filer',
     'ckeditor',
+    'course',
 ]
 
 MIDDLEWARE_CLASSES = [
