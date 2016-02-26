@@ -18,8 +18,8 @@
                 {% for course in object_list %}
                     <tr>
                         <td>{{ course.pk }}</td>
-                        <td><a href="{% url 'course_detail' pk=course.pk %}">{{ course.course_title }}</a></td>
-                        <td><img src="{{ course.art }}" alt=""></td>
+                        <td><a href="{% url 'course_detail' course.pk %}">{{ course.course_title }}</a></td>
+                        <td><img src="{{ course.art }}" alt=""/></td>
                         <td>{{ course.instructor }}</td>
                         <td>{{ course.course_duration }} weeks</td>
                     </tr>

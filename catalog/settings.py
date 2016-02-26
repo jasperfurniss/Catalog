@@ -113,12 +113,12 @@ BOWER_INSTALLED_APPS = (
     'font-awesome#4.5.0',
 )
 
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': 'unique-snowflake',
-    }
-}
+# CACHES = {
+#     'default': {
+#         # 'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+#         # 'LOCATION': 'unique-snowflake',
+#     }
+# }
 
 # ######### MIDDLEWARE CONFIGURATION
 MIDDLEWARE_CLASSES = [
