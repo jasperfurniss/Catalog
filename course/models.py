@@ -13,7 +13,7 @@ class Course(models.Model):
     description = models.CharField(max_length=255, null=True, blank=True)
     instructor = models.CharField(max_length=255, null=True, blank=True)
     course_duration = models.CharField(max_length=25, choices=DURATION, default=DURATION[0][0])
-    art = models.ImageField(upload_to="static/uploads")
+    art = models.ImageField(upload_to='static/uploads')
     slug = AutoSlugField(populate_from='course_title')
 
     def __unicode__(self):

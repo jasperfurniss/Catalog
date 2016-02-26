@@ -12,15 +12,13 @@ class CourseCreate(CreateView):
     success_url = reverse_lazy('course_list')
 
 
-
 class CourseUpdate(UpdateView):
     model = Course
     template_name = 'course/course_form.html'
     form_class = CourseForm
     success_url = reverse_lazy('course_detail')
 
-    def get_success_url(self):
-
+    # def get_success_url(self):
 
 
 class CourseList(ListView):
